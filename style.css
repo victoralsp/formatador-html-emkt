@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(#9a2737, #1a0202);
+    font-family: "Montserrat", sans-serif;
+    color: #fff;
+    height: 100vh;
+    width: 100vw;
+}
+
+#header {
+    background-color: #fff;
+    color: #9a2737;
+    text-align: center;
+    padding: 1em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2em;
+}
+
+#header img {
+    width: 50px;
+    border-radius: 50%;
+}
+
+#input {
+    height: 300px;
+    margin: 1.5em 0;
+    width: 300px;
+    outline: none;
+    color: #1a0202;
+    background-color: #ffffff;
+    border-radius: 2px;
+}
+
+
+#formatacao-html {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    gap: 10em;
+    justify-content: center;
+    height: calc(100vh - 8em);
+}
+
+#output {
+    height: 300px;
+    width: 50vw;
+    max-width: 700px;
+    overflow: auto;
+    padding: 1em;
+    border: 1px solid #fff;
+    border-radius: 2px;
+    word-wrap: break-word;
+    margin: 1.5em 0;
+}
+
+::-webkit-scrollbar {
+    color: #000000;
+    width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #9a2737;
+    border-radius: 2px;
+}
+
+button {
+    padding: 1em 3em;
+    border-radius: 50px;
+    outline: none;
+    background-color: #9a2737;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.349);
+    transition: .5s ease;
+}
+
+button:hover {
+    background-color: #751f2a; 
+}
+
+#msg {
+    margin: 0 1em;
+}
+
+@media screen and (max-width: 1200px) {
+    #formatacao-html {
+        gap: 5em;
+    } 
+}
+
+@media screen and (max-width: 800px) {
+    body {
+        background-color: #1a0202 !important;
+    }
+    #formatacao-html {
+        background-color: #1a0202;
+        flex-direction: column;
+        height: fit-content;
+        padding: 5em 0;
+    } 
+    #input {
+        width: 90vw;
+    }
+    #output {
+        width: 90vw;
+    }
+}
