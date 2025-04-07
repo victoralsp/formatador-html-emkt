@@ -1,0 +1,19 @@
+@media screen and (max-width: 800px) {
+    body {
+        height: fit-content !important;
+    }
+
+    main {
+        padding: 4em 0;
+    }
+
+    #formatacao-html {
+        flex-direction: column !important;
+        gap: 4em !important;
+        height: fit-content !important;
+    }
+
+    #input, #output {
+        width: 80vw !important;
+    }
+}
