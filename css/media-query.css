@@ -13,7 +13,7 @@
         height: fit-content !important;
     }
 
-    #input, #output {
+    #input, #outputResult {
         width: 80vw !important;
     }
 }
