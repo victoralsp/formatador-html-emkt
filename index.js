@@ -1,3 +1,5 @@
+input
+
 function converter() {
   const input = document.getElementById("input").value;
   const parser = new DOMParser();
@@ -26,13 +28,13 @@ function converter() {
 </table>`;
   }).join("\n");
 
-  document.getElementById("output").textContent = output;
+  document.getElementById("outputResult").textContent = output;
   document.getElementById("msg").textContent = "";
 }
 
 async function copiarResultado() {
-  const text = document.getElementById("output").textContent;
-
+  const text = document.getElementById("outputResult").textContent;
+  
   try {
     await navigator.clipboard.writeText(text);
     document.getElementById("msg").textContent = "Copiado com sucesso!";
@@ -40,8 +42,13 @@ async function copiarResultado() {
     document.getElementById("msg").textContent = "Erro ao copiar (tente HTTPS ou use manualmente)";
     console.error("Erro ao copiar:", err);
   }
-
+  
   setTimeout(() => {
     document.getElementById("msg").textContent = "";
   }, 3000);
+}
+
+function apagarInput() {
+  input.value = ''
+  document.getElementById("outputResult").textContent = ''
 }

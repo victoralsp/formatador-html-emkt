@@ -21,12 +21,15 @@
           <p>Cole o HTML do PSD aqui:</p>
           <textarea id="input"></textarea>
         </div>
-        <button onclick="converter()">Converter</button>
+        <div id="btn-display">
+          <button onclick="converter()">Converter</button>
+          <button onclick="apagarInput()" id="btnApagar">Apagar</button>
+        </div>
       </div>
-
+      
       <div id="html-estruturado">
         <p>Resultado:</p>
-        <pre id="output"></pre>
+        <pre id="outputResult"></pre>
         <button onclick="copiarResultado()">Copiar Resultado</button>
         <span id="msg" class="copied"></span>
       </div>

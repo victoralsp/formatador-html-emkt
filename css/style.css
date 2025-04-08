@@ -57,7 +57,7 @@ p {
 
 
 
-#output {
+#outputResult {
     height: 300px;
     width: 45vw;
     max-width: 700px;
@@ -81,6 +81,11 @@ p {
     border-radius: 2px;
 }
 
+#btn-display {
+    display: flex;
+    justify-content: space-between;
+}
+
 button {
     padding: 1em 3em;
     border-radius: 50px;
@@ -95,6 +100,17 @@ button {
 
 button:hover {
     background-color: #751f2a; 
+}
+
+#btnApagar {
+    background-color: transparent;
+    border: 2px solid #9a2737;
+    color: #9a2737;
+}
+
+#btnApagar:hover {
+    background-color: #9a2737;
+    color: #fff;
 }
 
 #msg {
