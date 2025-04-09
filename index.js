@@ -36,8 +36,12 @@ async function copiarResultado() {
   const text = document.getElementById("outputResult").textContent;
   
   try {
-    await navigator.clipboard.writeText(text);
-    document.getElementById("msg").textContent = "Copiado com sucesso!";
+    if (text != '') {
+      await navigator.clipboard.writeText(text);
+      document.getElementById("msg").textContent = "Copiado com sucesso!";
+    } else {
+      document.getElementById("msg").textContent = "Output vazio!";
+    }
   } catch (err) {
     document.getElementById("msg").textContent = "Erro ao copiar (tente HTTPS ou use manualmente)";
     console.error("Erro ao copiar:", err);
@@ -45,7 +49,7 @@ async function copiarResultado() {
   
   setTimeout(() => {
     document.getElementById("msg").textContent = "";
-  }, 3000);
+  }, 3500);
 }
 
 function apagarInput() {
